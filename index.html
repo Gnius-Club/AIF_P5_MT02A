@@ -11,7 +11,7 @@
 <body>
 
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook Sesión 2A 5to Primaria</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook Sesión 4A 5to Primaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
                 <span id="timer">⏱️ 00:00</span>
@@ -155,7 +155,19 @@
                 <div class="steps">
                     <div class="step-card">
                         <div class="step-content">
-                            <h3>Paso 1: Contextualización ⏰ 2 minutos</h3>
+                            <h3>Paso 1: "I Can Statement" ⏰ 2 minutos</h3>
+                            <p>(Proyectar Diapositiva 3) Presenta el objetivo concreto de la sesión.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Hoy vamos a explorar cómo funcionan estos servomotores y cómo podemos crear una secuencia de acciones, como en una coreografía. Al final de esta sesión, podrán decir: <strong>'Yo puedo explicar para qué sirve un servo, y tengo un plan para que mi robot realice una secuencia que combine el movimiento de las ruedas con la acción precisa de un servo.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Contextualización ⏰ 2 minutos</h3>
                             <p>(Proyectar Diapositiva 4) Anuncia el inicio de la actividad, muestra físicamente un servomotor y explica su función principal.</p>
                         </div>
                         <div class="collapsible">
@@ -167,25 +179,13 @@
                     </div>
                     <div class="step-card">
                         <div class="step-content">
-                            <h3>Paso 2: Ejemplificación ⏰ 3 minutos</h3>
+                            <h3>Paso 3: Ejemplificación ⏰ 3 minutos</h3>
                             <p>Demuestra el movimiento preciso del servo con tu propio proyecto de ejemplo.</p>
                         </div>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
                                 <p class="dialogue assistant">[Aquí, muestra tu propio ejemplo de un servomotor en acción que preparaste antes de la clase. Puede ser un brazo simple, una barrera, etc.]<br> Miren, yo programé este mecanismo. Si le doy la orden 've a 45 grados', él va y se queda ahí. Si ahora le digo 've a 120 grados', obedece instantáneamente. Esta capacidad de moverse a un punto exacto es lo que nos permite crear mecanismos. ¡Es un movimiento controlado y preciso!</p>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: "I Can Statement" ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 3) Presenta el objetivo concreto de la sesión.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Hoy vamos a explorar cómo funcionan estos servomotores y cómo podemos crear una secuencia de acciones, como en una coreografía. Al final de esta sesión, podrán decir: <strong>'Yo puedo explicar para qué sirve un servo, y tengo un plan para que mi robot realice una secuencia que combine el movimiento de las ruedas con la acción precisa de un servo.'</strong></p>
                             </div>
                         </div>
                     </div>
@@ -222,6 +222,7 @@ nezha_servo_S1_angulo(90) // Lo mueve a 90 grados
 
 // Para hacer una pausa de 1 segundo (1000 milisegundos):
 ESPERAR(1000)</pre>
+                                <p><i>Tip: Explícalo así: 'Este comando le dice al servo conectado en el puerto S1 que se mueva al ángulo que pongamos entre paréntesis, en este caso, 90 grados'.</i></p>
                                 <p class="dialogue assistant">Con esos comandos para el servo y las pausas, más los que ya conocen para las ruedas, pueden crear cualquier coreografía para su robot.</p>
                             </div>
                         </div>
@@ -279,6 +280,7 @@ POR SIEMPRE:
         // Regresar la palanca a su posición
         nezha_servo_S1_angulo(0)
     FIN SI</pre>
+                                 <p><i>Tip: Explícalo así: 'Este comando le dice al servo conectado en el puerto S1 que se mueva al ángulo que pongamos entre paréntesis, en este caso, 90 grados'.</i></p>
                                 <p class="dialogue assistant">¡Guárdenlo muy bien! Al final, cada equipo tendrá hasta 4 planes diferentes para el mismo robot. En la próxima clase, construirán el mecanismo/chasis y se organizarán para probarlos todos. ¡Será muy interesante!</p>
                             </div>
                         </div>
