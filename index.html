@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook: Sesión 7 - 5to Primaria</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Playbook-P5-TM3</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook: Sesión 7 - 5to Primaria</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 3 - 5o de Primaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -40,309 +38,406 @@
                 <li><a href="#activity-4">4</a></li>
                 <li><a href="#activity-5">5</a></li>
             </ul>
-
-            <div class="sidebar-info">
-                <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-            </div>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
-            <!-- SECCIÓN "DE UN VISTAZO" (ANTES ACTIVITY-0) -->
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos de aprendizaje PLAYBOOK:</strong>
-                                    <ul>
-                                        <li>Al final de la sesión, los estudiantes podrán:</li>
-                                        <li>- Aprender a usar mecanismos con servomotores.</li>
-                                        <li>- Utilizar la función nezha.servo_angle().</li>
-                                        <li>- Coordinar movimiento variando velocidad y usando pausas.</li>
-                                        <li>- Comprender la importancia de la temporización.</li>
-                                    </ul>
-                                    <strong>Objetivo General de la Sesión:</strong> Que los estudiantes construyan y programen un mecanismo controlado por servo en Python.
-                                    <strong>Secuencia de Clase:</strong>
-                                    <ul>
-                                        <li><strong class="tactic-highlight">⚡ Saludo Interactivo con IA:</strong> Activación y personalización de la IA.</li>
-                                        <li><strong class="tactic-highlight">⚡ "I Can Statement" + Ejemplificación:</strong> Clarificar objetivos y mostrar posibilidades.</li>
-                                        <li><strong class="tactic-highlight">⚡ AI GYM:</strong> Aprendizaje guiado por IA sobre conceptos y comandos.</li>
-                                        <li><strong class="tactic-highlight">⚡ Brain Spark:</strong> Proceso de ideación y diseño del plan en equipo e individual.</li>
-                                        <li><strong class="tactic-highlight">⚡ Gnius STORM:</strong> Compartición de planes y retroalimentación.</li>
-                                    </ul>
-                                    <strong>Entregable Clave:</strong>
-                                    <ul>
-                                        <li>Un conjunto de hasta 4 planes (GCS) individuales dentro de cada equipo, todos basados en el mismo mecanismo/chasis pero con diferentes secuencias de acción, listos para ser implementados en la próxima sesión.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos:</strong>
-                                    <ul>
-                                        <li>Proyector o pantalla interactiva.</li>
-                                        <li>Conexión a internet estable.</li>
-                                        <li>Acceso a MakeCode (<a href="https://makecode.microbit.org/" target="_blank">https://makecode.microbit.org/</a>).</li>
-                                        <li>Chat "Agente Gnius" (Xolo) activo y funcionando.</li>
-                                        <li>Presentación de diapositivas (Diapositivas 1-12).</li>
-                                        <li>1 Nezha Pro Sports Kit por equipo de 4 estudiantes.</li>
-                                        <li>Servomotor (del kit) para demostración.</li>
-                                        <li>Chasis de robot base de la sesión anterior por cada equipo.</li>
-                                    </ul>
-                                    <strong>Preparación Previa para ESTA Sesión:</strong>
-                                    <ol>
-                                        <li><strong>Revisión de Misión (Interna):</strong>
-                                            <ul>
-                                                <li>Verificar conexión a internet y funcionamiento de MakeCode.</li>
-                                                <li>Tener los kits y los chasis de la sesión anterior listos.</li>
-                                                <li>Tener la presentación de diapositivas (1-12) lista y en orden.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Familiarización:</strong> Revisar el flujo de la sesión, los diálogos y los tiempos.</li>
-                                        <li><strong>Ejemplo Profesor:</strong> Prepara tu propio ejemplo de un servomotor en acción que puedas mostrar en la Actividad 2. Debe ser simple y demostrar claramente el movimiento angular.</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar Micro:Bit y Kit Nezha Pro para controlar velocidad, pausas y secuencias de movimiento y comprender la planificación por fases y la coordinación como base de la precisión.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">“Explícamme por qué la coordinación y el tiempo son claves para que un robot se mueva con precisión. Enséñame qué significa temporizar un movimiento (velocidad + duración + pausa) y cómo esto se parece a cómo una IA planifica secuencias. Luego guíame para diseñar una ruta de vehículo con 3 fases: rápido → pausa → lento → giro → pausa.”</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Planificación por fases: Organizar acciones en pasos lógicos (primero, luego, después) para que el robot complete una tarea compleja sin errores.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Programar motores para que cambien de velocidad y se detengan en momentos específicos.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes duraciones de pausa y niveles de velocidad para entender limitaciones de movimiento.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Micro:Bit + Kit Nezha Pro (1 por cada 4 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a MakeCode (https://makecode.microbit.org/) con extensión Nezha Pro instalada</label>
+                        <label><input type="checkbox"> Cinta adhesiva para marcar estaciones de entrega</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con BLOQUES en MakeCode</label>
+                        <label><input type="checkbox"> 📋 Para agregar extensión: En MakeCode → Extensiones → Buscar 'Nezha' → Agregar</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Manipular con cuidado, no golpear, mantener en superficie plana, verificar batería y conectar los motores con delicadeza.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre la coordinación y el tiempo en el movimiento (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si el robot no se mueve:</strong> Verificar que el Kit Nezha esté encendido y la batería cargada. Revisar que los motores estén en los puertos correctos.</li>
+                            <li><strong>Si el código no carga:</strong> Verificar la conexión USB del Micro:Bit y que la extensión Nezha Pro esté agregada.</li>
+                            <li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
-
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Saludo de I.A. con todos ⏰ 3 minutos</h2>
-                <p>Crear un ambiente acogedor y activar a la IA para la sesión de diseño de mecanismos.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Bienvenida e Instrucción ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 2) Da la bienvenida a los alumnos y guíalos para que activen a Xolo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Hola, equipo de creadores! Vamos a activar a nuestro <strong>copiloto, Xolo</strong>. Por favor, salúdenlo en el chat y díganle su nombre y cuáles son sus gustos e intereses. Por ejemplo: <strong>'Hola Xolo, soy Andrea y me gustan los videojuegos y el arte.'</strong>.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Verificación de Interacción ⏰ 2 minutos</h3>
-                            <p>Monitorea la interacción de los alumnos con la IA, asegurándote de que todos reciban el saludo de bienvenida.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Excelente! Veo que <strong>Xolo</strong> les está contestando y está listo para aprender con nosotros. Asegúrense de que todos hayan recibido su saludo de bienvenida. Si <strong>Xolo</strong> no les ha respondido, ¡avísenme!</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "¡Hoy le daremos ritmo y precisión a sus robots con el Kit Nezha!".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre la coordinación y el tiempo en el movimiento.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A programar secuencias de movimiento para que el robot sea un mensajero preciso.</p>
+                        <p><strong>Aplicación real:</strong> Los vehículos autónomos en almacenes inteligentes usan esta tecnología para entregar paquetes sin chocar.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: I Can Statement + Ejemplificación ⏰ 7 minutos</h2>
-                <p>Presentar el componente clave (servomotor) y el objetivo de la clase.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: "I Can Statement" ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 3) Presenta el objetivo concreto de la sesión.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Hoy vamos a explorar cómo funcionan estos <strong>servomotores</strong> y cómo podemos crear una <strong>secuencia de acciones</strong>, como en una coreografía. Al final de esta sesión, podrán decir: <strong>'Yo puedo explicar para qué sirve un servo, y tengo un plan para que mi robot realice una secuencia que combine el movimiento de las ruedas con la acción precisa de un servo.'</strong></p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Contextualización ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 4) Anuncia el inicio de la actividad, muestra físicamente un servomotor y explica su función principal.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Muy bien, vamos a empezar con nuestra actividad <strong>'I Can Statement + Ejemplificación'</strong>. Miren este componente. Es un <strong>servomotor</strong>. A diferencia de los motores de las ruedas que giran sin parar, este es un <strong>motor de precisión</strong>. No gira y gira, sino que se mueve a un <strong>ángulo exacto</strong> que nosotros le ordenamos y se queda ahí. ¡Piensen en él como una <strong>articulación</strong>, como su codo o su rodilla!</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Ejemplificación ⏰ 3 minutos</h3>
-                            <p>Demuestra el movimiento preciso del servo con tu propio proyecto de ejemplo.</p>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo la velocidad y el tiempo crean movimientos precisos.</li>
+                            <li>Introduce el concepto de planificación por fases.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar el Kit Nezha para temporizar movimientos.</li>
+                            <li>Aprender sobre coordinación y precisión.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">[Aquí, muestra tu propio ejemplo de un servomotor en acción que preparaste antes de la clase. Puede ser un brazo simple, una barrera, etc.]<br> Miren, yo programé este mecanismo. Si le doy la orden <strong>'ve a 45 grados'</strong>, él va y se queda ahí. Si ahora le digo <strong>'ve a 120 grados'</strong>, obedece instantáneamente. Esta capacidad de moverse a un <strong>punto exacto</strong> es lo que nos permite crear <strong>mecanismos</strong>. ¡Es un <strong>movimiento controlado y preciso</strong>!</p>
-                            </div>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar el Kit Nezha para controlar la velocidad y comprender la planificación por fases.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">Ahora vamos a aprender algo fascinante. Abran el chat con XOLO y saluden. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy sobre cómo los robots usan el tiempo para moverse con precisión. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Pregúntenle sobre cómo la velocidad y las pausas hacen que un robot sea más inteligente. ¡Aprovechen para resolver sus dudas! XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él.</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3: AI GYM ⏰ 15 minutos</h2>
-                <p>Guiar a los alumnos para que aprendan con Xolo sobre secuencias, temporización y los comandos necesarios.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Exploración con Xolo ⏰ 7 minutos</h3>
-                            <p>(Proyectar Diapositiva 5 y 6) Anuncia la actividad y guía a los alumnos para que pidan a Xolo que les enseñe sobre los conceptos de la sesión.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Perfecto, ahora es momento de entrar al <strong>A.I. GYM</strong>! Para que <strong>Xolo</strong> les explique los secretos de los mecanismos, escriban en el chat: <strong>"Mi perfil es [escribe aquí tu perfil] y quiero reflexionar sobre por qué la precisión es tan importante en robótica. Si un servo gira un poco de más, ¿qué podría pasar en un robot real, como uno médico o de fábrica? Ahora quiero que me enseñes cómo controlar servomotores y motores del Nezha Pro para lograr movimientos coordinados y seguros. Explícame cómo usar en Python los comandos nezha.servo_angle(S1, ángulo) para controlar la posición y nezha.motor_speed(M1, velocidad) junto con sleep(ms) para coordinar pausas. Xolo, ayúdame a planear una secuencia de acciones precisas para mi robot."</strong></p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Los Comandos del Plan ⏰ 8 minutos</h3>
-                            <p>(Proyectar Diapositiva 7) Indica a los alumnos que presten atención a los comandos que Xolo les mostrará para crear su plan.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Kits Nezha Pro conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE para un robot mensajero.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar el Kit Nezha como mensajero.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Conectar el Micro:Bit al Kit Nezha y probar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Xolo, ayúdame a idear un proyecto de ruta con pausas y cambios de velocidad usando Python. Mi vibe: ‘robot mensajero que se detiene en estaciones’. Ayúdame a definir estaciones, ritmo y seguridad. Luego convierte la vibe en un GCS y dame el código en Python para ejecutarlo, de acuerdo a tu entrenamiento con el robot XGO y Micro:bit."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Muy bien! Ahora que entienden los <strong>conceptos</strong>, necesitan las <strong>herramientas</strong> para su plan. <strong>Xolo</strong> les va a mostrar los comandos exactos que usaremos. Presten atención a la sintaxis de <strong>Python</strong> que estamos practicando.</p>
-                                <pre class="dialogue assistant" style="color: #d32f2f;"># Comandos inspirados en Python para el plan
-# Para mover un servo (posición precisa):
-nezha.servo_angle(S1, 90) 
-
-# Para mover las ruedas (velocidad continua):
-nezha.motor_speed(M1, 60)
-
-# Para hacer una pausa (temporización):
-sleep(1000) # 1 segundo</pre>
-                                <p class="dialogue assistant">Con esos comandos para el <strong>servo</strong> y las <strong>pausas</strong>, más los que ya conocen para las ruedas, pueden crear cualquier <strong>coreografía</strong> para su robot.</p>
-                            </div>
-                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿Funciona como esperabas?</li>
+                            <li>¿Qué pasa si la pausa es demasiado corta entre movimientos?</li>
+                            <li>¿Funciona igual en velocidad rápida que en velocidad lenta al girar?</li>
+                            <li>¿Cómo ayuda la planificación por fases a que el robot llegue a la estación correcta?</li>
+                            <li>¿Por qué la coordinación entre motores es necesaria para lograr precisión en la ruta?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear! Vamos a convertir sus robots en mensajeros expertos. Primero, platiquen con XOLO para idear su ruta; piensen en qué estaciones se detendrá y qué tan rápido debe ir. Una vez que tengan su VIBE y el GCS, pásenlo a MakeCode. Por ejemplo, podrían hacer un robot que entregue medicinas en un hospital, yendo rápido en pasillos y lento al entrar a los cuartos. Prueben su código en el simulador y luego en su robot real. Si algo no sale a la primera, no se preocupen, pregúntenle a XOLO para depurar. Al terminar, entreguen el hardware con cuidado. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con la ruta básica de mensajero. ¿Puedes enseñarme cómo hacer que mi Kit Nezha use un sensor para detenerse automáticamente si encuentra un obstáculo en su estación?"</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
             <div class="activity-card" id="activity-4">
-                 <h2>⚡ Actividad 4: Brain Spark ⏰ 10 minutos</h2>
-                <p>Proceso de diseño en equipo de un mecanismo/chasis y planificación individual de la secuencia.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Formación de Equipos y Decisión de Mecanismo/Chasis ⏰ 3 minutos</h3>
-                            <p>(Proyectar Diapositiva 8) Anuncia la actividad, organiza a los alumnos en equipos de 4 y guíalos para que elijan un mecanismo/chasis.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Es hora de la actividad <strong>Brain Spark</strong>! Formen sus equipos de 4 estudiantes. Su primera misión como equipo es decidir qué <strong>mecanismo/chasis simple</strong> van a diseñar para añadir a su robot. ¿Será una palanca que patea, una barrera que sube y baja, o un brazo que saluda? Discutan y pónganse de acuerdo en <strong>UN solo mecanismo/chasis</strong> que construirán en la próxima clase. ¡Tienen 3 minutos!</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Ideación Individual y Ayuda de Xolo ⏰ 3 minutos</h3>
-                            <p>(Proyectar Diapositiva 9) Guía a los alumnos en la fase de ideación individual y muéstrales cómo pedir ayuda si la necesitan.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">¡Perfecto! Ahora que cada equipo tiene su <strong>mecanismo/chasis</strong>, viene la parte <strong>individual</strong>. Cada uno de ustedes va a pensar en una <strong>'idea' o secuencia de acciones DIFERENTE</strong> para ese mismo mecanismo/chasis. Si eligieron la barrera, uno puede planear que suba con el botón A, otro que haga una rutina de sube-baja, etc. Si no se les ocurre nada, ¡no hay problema! Escriban en el chat el comando exacto: <strong>'exploremos ideas juntos para un mecanismo/chasis de [nombre del mecanismo/chasis que eligieron] que se mueva con un servomotor'</strong>.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Creando el Plan Individual ⏰ 4 minutos</h3>
-                            <p>(Proyectar Diapositiva 10) Indica a cada alumno que describa su idea personal a Xolo para obtener su propio plan y consolida el resultado.</p>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué fases de movimiento funcionaron bien.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué fases de velocidad funcionaron mejor en tu robot mensajero? ¿Qué te sorprendió del tiempo de las pausas?</p>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, uno por uno, cada miembro del equipo va a describirle su <strong>idea personal</strong> a <strong>Xolo</strong> para que les genere su plan. Sean muy específicos. Por ejemplo: <strong>'Mi idea es que nuestra palanca patee a 90 grados y regrese a 0 cuando presiono el botón A'</strong>. <strong>Xolo</strong> les dará un <strong>plan único</strong> a cada uno. Por ejemplo, para la idea anterior, podría generar un plan como este:</p>
-                                <pre class="dialogue assistant" style="color: #d32f2f;">// PLAN para patear con botón A
-AL INICIO:
-    # Poner la palanca en posición de reposo
-    nezha_servo_angle(S1, 0)
-
-POR SIEMPRE:
-    SI (botón A presionado):
-        # Mover la palanca para patear
-        nezha_servo_angle(S1, 90)
-        sleep(500)
-        # Regresar la palanca a su posición
-        nezha_servo_angle(S1, 0)
-    FIN SI</pre>
-                                 <p class="dialogue assistant">¡Guárdenlo muy bien! Al final, cada equipo tendrá hasta <strong>4 planes diferentes</strong> para el mismo robot. En la próxima clase, construirán el <strong>mecanismo/chasis</strong> y se organizarán para probarlos todos. ¡Será muy interesante!</p>
-                            </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi robot mensajero coordinó bien los giros y las pausas. Me sorprendió que la velocidad lenta ayuda mucho a la precisión."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
             <div class="activity-card" id="activity-5">
-                <h2>⚡ Actividad 5: Gnius STORM ⏰ 5 minutos</h2>
-                <p>Compartir los planes de los mecanismos/chasis y las secuencias robóticas.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Gnius STORM (Think - Individual) ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 11) Anuncia la actividad final e instruye una reflexión individual.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">
-                                     ¡Llegamos a nuestra última actividad, el <strong>Gnius STORM</strong>! Antes de compartir, tómense un momento para revisar su <strong>plan individual</strong>. ¿Entienden cada paso? ¿Creen que se verá como lo imaginaron?</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Gnius STORM (Share - Grupo) ⏰ 3 minutos</h3>
-                            <p>Indica a los equipos que compartan el mecanismo/chasis que eligieron y un ejemplo de secuencia.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">
-                                    ¡Ahora, vamos a compartir! Un portavoz de cada equipo nos contará brevemente qué <strong>mecanismo/chasis</strong> eligieron construir como equipo, y luego nos dará un ejemplo de una de las <strong>secuencias individuales</strong> que planearon. Por ejemplo: 'Nuestro equipo eligió un portero, y mi plan es que se mueva a la derecha cuando presiono el botón B'.
-                                </p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Gnius STORM (Reflexión Final y Cierre) ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 12) Cierra la sesión y conecta con la siguiente clase.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Fantásticos planes! Han diseñado <strong>coreografías completas</strong> para sus robots y han aprendido que la <strong>precisión</strong> y el <strong>tiempo</strong> son súper importantes. En la próxima clase, <strong>nos concentraremos primero en la construcción de estos mecanismos/chasis. Una vez terminados, comenzaremos a programar</strong> sus secuencias y veremos a esos atletas robóticos realizar sus rutinas. ¡Preparen sus <strong>herramientas de construcción</strong>!</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
-</html>
+</html></html>
